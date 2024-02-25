@@ -2,7 +2,9 @@ package com.beater.landmarkremark.services.firebase_services
 
 import android.util.Log
 import com.beater.landmarkremark.models.Note
-import com.beater.landmarkremark.utils.QUERY_ENDING_AT_VALUE
+import com.beater.landmarkremark.utils.extensions.containsDescriptionKeyword
+import com.beater.landmarkremark.utils.extensions.containsEmailKeyword
+import com.beater.landmarkremark.utils.extensions.containsTitleKeyword
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.CollectionReference
@@ -60,30 +62,30 @@ class CloudFirestoreService {
         return try {
             // Search compare email
             val notesWithEmail = notesRef
-                .whereLessThanOrEqualTo("email", keyword + QUERY_ENDING_AT_VALUE)
                 .get()
                 .await()
                 .documents
+                .filter { it.containsEmailKeyword(keyword) }
                 .map { it.toObject(Note::class.java) ?: Note() }
 
             uniqueNotes.addAll(notesWithEmail)
 
             // Search compare title
             val notesWithTitle = notesRef
-                .whereLessThanOrEqualTo("title", keyword + QUERY_ENDING_AT_VALUE)
                 .get()
                 .await()
                 .documents
+                .filter { it.containsTitleKeyword(keyword) }
                 .map { it.toObject(Note::class.java) ?: Note() }
 
             uniqueNotes.addAll(notesWithTitle)
 
             // Search compare description
             val notesWithDescription = notesRef
-                .whereLessThanOrEqualTo("description", keyword + QUERY_ENDING_AT_VALUE)
                 .get()
                 .await()
                 .documents
+                .filter { it.containsDescriptionKeyword(keyword) }
                 .map { it.toObject(Note::class.java) ?: Note() }
 
             uniqueNotes.addAll(notesWithDescription)
