@@ -2,9 +2,7 @@ package com.beater.landmarkremark.services.firebase_services
 
 import android.util.Log
 import com.beater.landmarkremark.models.Note
-import com.beater.landmarkremark.utils.extensions.containsDescriptionKeyword
-import com.beater.landmarkremark.utils.extensions.containsEmailKeyword
-import com.beater.landmarkremark.utils.extensions.containsTitleKeyword
+import com.beater.landmarkremark.utils.extensions.containsFieldKeyword
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.CollectionReference
@@ -65,7 +63,7 @@ class CloudFirestoreService {
                 .get()
                 .await()
                 .documents
-                .filter { it.containsEmailKeyword(keyword) }
+                .filter { it.containsFieldKeyword("email", keyword) }
                 .map { it.toObject(Note::class.java) ?: Note() }
 
             uniqueNotes.addAll(notesWithEmail)
@@ -75,7 +73,7 @@ class CloudFirestoreService {
                 .get()
                 .await()
                 .documents
-                .filter { it.containsTitleKeyword(keyword) }
+                .filter { it.containsFieldKeyword("title", keyword) }
                 .map { it.toObject(Note::class.java) ?: Note() }
 
             uniqueNotes.addAll(notesWithTitle)
@@ -85,7 +83,7 @@ class CloudFirestoreService {
                 .get()
                 .await()
                 .documents
-                .filter { it.containsDescriptionKeyword(keyword) }
+                .filter { it.containsFieldKeyword("description", keyword) }
                 .map { it.toObject(Note::class.java) ?: Note() }
 
             uniqueNotes.addAll(notesWithDescription)
