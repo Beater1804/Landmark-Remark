@@ -44,4 +44,4 @@ GOOGLE_MAPS_API_KEY=<PROVIDED_KEY>
 ```
 
 # APK
-1. Link APK here: https://drive.google.com/file/d/1fxLM_JZL_itaylljMuUTA7mPyfoodKTd/view?usp=sharing
+1. Link APK here: https://drive.google.com/drive/folders/1BiVRbs2kS0ZMIOP0Sj7u2I1Y3dHGU1LO?usp=sharing
