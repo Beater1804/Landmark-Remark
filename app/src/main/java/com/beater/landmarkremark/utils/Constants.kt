@@ -1,0 +1,11 @@
+package com.beater.landmarkremark.utils
+
+const val APP_STORAGE_DATA_KEY = "APP_STORAGE_DATA_KEY"
+
+const val PASSWORD_LENGTH = 6
+const val DEFAULT_EMAIL_OR_PASSWORD_INCORRECT = "DEFAULT"
+const val DEFAULT_EXISTS_EMAIL = "DEFAULT"
+const val NOTE_DESCRIPTION_LENGTH = 500
+const val URL_UTF8_CHARSET = "utf-8"
+const val DEFAULT_SEARCH_KEYWORD = "DEFAULT_SEARCH_KEYWORD"
+const val QUERY_ENDING_AT_VALUE = "\uf8ff"

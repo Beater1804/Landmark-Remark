@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Landmark Remark</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome">Welcome\n %1$s</string>
+    <string name="input_required">Input required</string>
+    <string name="invalid_email">Please enter using only half-width letters, numbers, and some symbols.</string>
+    <string name="invalid_password">Please enter a password of 6 or more digits.</string>
+    <string name="sign_in_to_landmark_remark">Sign in to Landmark Remark</string>
+    <string name="email_placeholder">Email address</string>
+    <string name="password_placeholder">Password</string>
+    <string name="sign_in_input_required">Email address and password are invalid</string>
+    <string name="back">ⵦ Back</string>
+    <string name="invalid_password_confirm">Confirmation passwords do not match</string>
+    <string name="new_password_placeholder">Password (6 alphanumeric characters)</string>
+    <string name="confirm_new_password_placeholder">Re-enter password to confirm</string>
+    <string name="register">Register</string>
+    <string name="list_of_short_notes">List of short notes about locations</string>
+    <string name="notice_allow_permissions">Please allow the necessary permissions</string>
+    <string name="allow_permission">Allow Permission</string>
+    <string name="error">Error</string>
+    <string name="email_or_password_is_incorrect">Email or password is incorrect</string>
+    <string name="email_already_exists">Email already exists</string>
+    <string name="empty_note">Empty note!</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="title_placeholder">Title</string>
+    <string name="description_placeholder">Description</string>
+    <string name="add_new_note_for_current_location">Add new note for current location</string>
+    <string name="add_note_successful">Add note successful</string>
+    <string name="search">Search...</string>
+    <string name="not_found_note">Note not found from search results</string>
+    <string name="please_search">Please enter keywords to search for Note</string>
+</resources>
